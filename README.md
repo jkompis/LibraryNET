@@ -30,7 +30,7 @@ Project containing unit tests using xUnit framework.
 
 ### LibraryNET.Api
 
-This service is main service providing basic library APIs. It utilizes minimal APIs and entity framework.
+This service is main service providing basic library APIs. It utilizes minimal APIs, fluent validation and entity framework.
 
 To use / test it you can access http://localhost:5224/swagger
 

@@ -13,8 +13,8 @@ internal sealed class GetPendingBorrowingRemindersHandler(LibraryContext context
 {
     public async Task<IResult> Handle(CancellationToken cancellationToken)
     {
-        // 90 days period remind 7 days before
-        var cutoffTime = DateTime.UtcNow.AddDays(-83);
+        // 90 days period remind 1 day before
+        var cutoffTime = DateTime.UtcNow.Date.AddDays(-89);
 
         return Results.Ok(await context.BookBorrowings
             .Where(bb => bb.RemindedAt == null && bb.BorrowedAt <= cutoffTime)
